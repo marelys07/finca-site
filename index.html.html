@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finca Juana y Leticia</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5fcef;
+      color: #2f4f4f;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
+    section {
+      scroll-snap-align: start;
+      min-height: 100vh;
+      padding: 4rem 2rem;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #d6eecf;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 90px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #2f4f4f;
+      font-weight: bold;
+    }
+
+    h1, h2 {
+      color: #2f4f4f;
+      text-align: center;
+    }
+
+    .intro p {
+      max-width: 900px;
+      margin: 1.5rem auto;
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 1.6;
+      background: #ffffffcc;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .valores-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+
+    .valores-grid div {
+      background: #ffffffdd;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 160px;
+    }
+
+    .valores-grid div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .valores-grid div img {
+      width: 70px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .valores-grid div p {
+      font-size: 1rem;
+    }
+
+    .carrete {
+      max-width: 900px;
+      margin: 3rem auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .carrete-contenido {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carrete-contenido img,
+    .carrete-contenido video {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .flecha {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .flecha.izquierda {
+      left: 0;
+    }
+
+    .flecha.derecha {
+      right: 0;
+    }
+
+    footer {
+      background-color: #d6eecf;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .valores-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .carrete-contenido img,
+      .carrete-contenido video {
+        max-height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="imagenes/logo.png" alt="Logo Finca Juana y Leticia" />
+    <nav>
+      <a href="#inicio">INICIO</a>
+      <a href="#quienes">QUIENES SOMOS</a>
+      <a href="#impacto">NUESTRO IMPACTO</a>
+      <a href="#proyectos">PROYECTOS</a>
+      <a href="#contacto">CONTACTANOS</a>
+      <a href="#comprar">COMPRAR</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h1>Bienvenidos a Finca Juana y Leticia</h1>
+    <div class="intro">
+      <p>Estamos ubicados en el corazón de Rincón de las Palmas, Penonomé, somos un espacio donde la tierra, el amor y la sostenibilidad se unen. Inspirados por nuestras raíces familiares y guiados por una visión regenerativa, cultivamos alimentos sanos, orgánicos, criamos animales con respeto y desarrollamos proyectos que impactan positivamente a nuestra comunidad y al medio ambiente.</p>
+      <p>En cada rincón de Finca Juana y Leticia vive una historia: la de una mujer que sueña con una agricultura consciente, con animales felices, con niños, jóvenes y adultos aprendiendo del campo, con un entorno limpio y una comunidad unida.</p>
+      <p>Esto no es solo una finca: es nuestro hogar, un refugio, una forma de vivir diferente.</p>
+      <p>Aquí no solo sembramos la tierra, sembramos en la conciencia de cada persona que nos visita.</p>
+    </div>
+
+    <h2>¿Qué hacemos en la finca?</h2>
+    <div class="valores-grid">
+      <div>
+        <img src="imagenes/vector_agricultura.png" alt="Agricultura agroecológica" />
+        <p>Agricultura agroecológica</p>
+      </div>
+      <div>
+        <img src="imagenes/vector_avicultura.png" alt="Avicultura responsable" />
+        <p>Avicultura responsable</p>
+      </div>
+      <div>
+        <img src="imagenes/vector_animales.png" alt="Cuidado de animales rescatados" />
+        <p>Cuidado de animales rescatados</p>
+      </div>
+      <div>
+        <img src="imagenes/vector_reciclaje.png" alt="Educación ambiental y reciclaje" />
+        <p>Educación ambiental y reciclaje</p>
+      </div>
+      <div>
+        <img src="imagenes/vector_productos.png" alt="Venta de productos naturales y locales" />
+        <p>Venta de productos naturales y locales</p>
+      </div>
+    </div>
+
+    <div class="carrete">
+      <button class="flecha izquierda" onclick="moverCarrete(-1)">&#10094;</button>
+      <div class="carrete-contenido" id="carrete">
+        <img src="imagenes/carrete_1.png" alt="Foto 1">
+        <img src="imagenes/carrete_2.png" alt="Foto 2">
+        <img src="imagenes/carrete_3.jpeg" alt="Foto 3">
+        <img src="imagenes/carrete_4.jpeg" alt="Foto 4">
+        <video muted loop>
+          <source src="videos/video_finca.mp4" type="video/mp4">
+        </video>
+      </div>
+      <button class="flecha derecha" onclick="moverCarrete(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="quienes">
+    <h2>¿Quiénes somos?</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center; font-size: 1.2rem;">
+      Somos una familia apasionada por la tierra, la sostenibilidad y el cambio positivo. Finca Juana y Leticia nace del sueño de conectar con nuestras raíces, cuidar el planeta y ofrecer un espacio de aprendizaje, amor y comunidad.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Finca Juana y Leticia. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let posicion = 0;
+    const contenedor = document.getElementById('carrete');
+    const total = contenedor.children.length;
+
+    function moverCarrete(direccion) {
+      posicion += direccion;
+      if (posicion < 0) posicion = total - 1;
+      if (posicion >= total) posicion = 0;
+      contenedor.style.transform = `translateX(-${posicion * 100}%)`;
+    }
+
+    setInterval(() => {
+      moverCarrete(1);
+    }, 5000);
+  </script>
+
+</body>
+</html>
